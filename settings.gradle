@@ -1,2 +1,3 @@
 rootProject.name = "testAppConstanta"
 include ':app'
+include ':shared:ui'
