@@ -2,3 +2,4 @@ rootProject.name = "testAppConstanta"
 include ':app'
 include ':features:filmsScreen'
 include ':shared:ui'
+include ':shared:network'
