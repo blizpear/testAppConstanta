@@ -1,13 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent">
+	android:layout_height="match_parent"
+	android:orientation="vertical">
 
-	<TextView
+	<com.google.android.material.appbar.MaterialToolbar
+		android:id="@+id/toolbar"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:text="Hello"/>
+		android:layout_height="?actionBarSize">
 
-</FrameLayout>
+		<TextView
+			android:id="@+id/title_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/film_toolbar"
+			android:textSize="@dimen/text_size_toolbar"/>
+	</com.google.android.material.appbar.MaterialToolbar>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:id="@+id/error"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:gravity="center_horizontal"
+			android:orientation="vertical"
+			android:visibility="gone"
+			tools:visibility="visible">
+
+			<TextView
+				android:id="@+id/error_text"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal"
+				android:text="@string/film_error"/>
+
+			<Button
+				android:id="@+id/retry_button"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/film_retry"/>
+		</LinearLayout>
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/content"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:visibility="gone"
+			tools:visibility="gone"/>
+
+		<ProgressBar
+			android:id="@+id/progress_bar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:visibility="gone"/>
+	</FrameLayout>
+</LinearLayout>

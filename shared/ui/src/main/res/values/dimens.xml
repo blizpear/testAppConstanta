@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="margin_8">8dp</dimen>
+	<dimen name="padding_8">8dp</dimen>
+
+	<dimen name="text_size_18sp">18sp</dimen>
+	<dimen name="text_size_toolbar">22sp</dimen>
+
+	<dimen name="corner_radius">8dp</dimen>
+</resources>

@@ -19,4 +19,5 @@ dependencies {
 	implementation Dependencies.RECYCLER_VIEW
 
 	implementation project(":shared:ui")
+	implementation project(":shared:network")
 }
